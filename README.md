@@ -1,0 +1,1 @@
+# openimis-be-calculation-rule-fs_salary_procentage_py
