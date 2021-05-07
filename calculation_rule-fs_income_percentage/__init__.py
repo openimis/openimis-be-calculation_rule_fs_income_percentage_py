@@ -1,0 +1,1 @@
+default_app_config = 'calculation_rule-fs_income_percentage.apps.CalculationRuleFSIncomePercentageConfig'
