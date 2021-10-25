@@ -25,6 +25,7 @@ class ContributionValuationRuleNoDependant(AbsCalculationRule):
     signal_get_param = Signal(providing_args=[])
     signal_get_linked_class = Signal(providing_args=[])
     signal_calculate_event = Signal(providing_args=[])
+    signal_convert_from_to = Signal(providing_args=[])
 
     @classmethod
     def ready(cls):
@@ -41,7 +42,7 @@ class ContributionValuationRuleNoDependant(AbsCalculationRule):
                 cls.signal_calculate_event.connect(cls.run_calculation_rules, dispatch_uid="on_calculate_event_signal")
 
     @classmethod
-    def active_for_object(cls, instance, context):
+    def active_for_object(cls, instance, context, type='account_receivable', sub_type='contribution'):
         return instance.__class__.__name__ == "ContractContributionPlanDetails" \
                and context in ["create", "update"] \
                and cls.check_calculation(instance)
