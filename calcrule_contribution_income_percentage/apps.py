@@ -17,7 +17,6 @@ def read_all_calculation_rules():
             CALCULATION_RULES.append(cls)
             cls.ready()
 
-
 class CalculationRuleFSIncomePercentageConfig(AppConfig):
     name = MODULE_NAME
 
