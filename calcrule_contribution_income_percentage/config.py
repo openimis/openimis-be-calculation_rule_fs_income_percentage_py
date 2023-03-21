@@ -15,8 +15,6 @@ CLASS_RULE_PARAM_VALIDATION = [
                     "update": "151203",
                     "replace": "151206",
                 },
-                'relevance': "True",
-                'condition': "INPUT>1",
                 'optionSet': [
                     {
                         "value": "5",
@@ -40,23 +38,9 @@ CLASS_RULE_PARAM_VALIDATION = [
                         }
                     },
                 ],
+                'relevance': "True",
+                'condition': "INPUT>1",
                 "default": "5"
-            },
-            {
-                "type": "checkbox",
-                "name": "includeFamilly",
-                "label": {
-                    "en": "include family members",
-                    "fr": "Inclure les membres de la familles"
-                },
-                "rights": {
-                    "read": "151201",
-                    "write": "151202",
-                    "update": "151203",
-                    "replace": "151206",
-                },
-                "relevance": "True",
-                "default": "False"
             },
         ],
     },
@@ -107,9 +91,9 @@ CLASS_RULE_PARAM_VALIDATION = [
 ]
 
 DESCRIPTION_CONTRIBUTION_VALUATION = F"" \
-    F"This calcutation will add the income in the contract details " \
-    F"and PHinsuree and the percentage in the Contribution plan" \
-    F" so when a contract valuation is requested then the calculation will" \
-    F" determine the value based on the contract details income and CP percentage"
+                                     F"This calcutation will add the income in the contract details " \
+                                     F"and PHinsuree and the percentage in the Contribution plan" \
+                                     F" so when a contract valuation is requested then the calculation will" \
+                                     F" determine the value based on the contract details income and CP percentage"
 
 FROM_TO = []
