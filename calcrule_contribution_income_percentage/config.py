@@ -3,7 +3,7 @@ CLASS_RULE_PARAM_VALIDATION = [
         "class": "ContributionPlan",
         "parameters": [
             {
-                "type": "select",
+                "type": "number",
                 "name": "rate",
                 "label": {
                     "en": "Percentage of income",
@@ -15,29 +15,6 @@ CLASS_RULE_PARAM_VALIDATION = [
                     "update": "151203",
                     "replace": "151206",
                 },
-                'optionSet': [
-                    {
-                        "value": "5",
-                        "label": {
-                            "en": "5%",
-                            "fr": "5%"
-                        }
-                    },
-                    {
-                        "value": "10",
-                        "label": {
-                            "en": "10%",
-                            "fr": "10%"
-                        }
-                    },
-                    {
-                        "value": "15",
-                        "label": {
-                            "en": "15%",
-                            "fr": "15%"
-                        }
-                    },
-                ],
                 'relevance': "True",
                 'condition': "INPUT>1",
                 "default": "5"
