@@ -8,12 +8,6 @@ and therefore that module is dependent on this core calculation module. This mod
   - None (using no database approach for CalculationRule) - Calculation Rule is saved by defining class 
     extending the ABSCalculationClass from core module.
 
-## Listened Django Signals
-  - signal_get_rule_name
-  - signal_get_rule_details
-  - signal_get_param
-  - signal_get_linked_class
-  - signal_calculate_event
 
 ## GraphQl Queries
   None
