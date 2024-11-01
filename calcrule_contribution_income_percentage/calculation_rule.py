@@ -98,11 +98,11 @@ class ContributionValuationRuleNoDependant(AbsStrategy):
                     elif "income" in phi_params:
                         income = float(phi_params["income"])
                     else:
-                        return varB__A = np.ones(size, dtype=int)  # import numpy as np
+                        return False
                     value = float(income) * (rate / 100)
                     return value
-                elif context == 'members':
-                    return [instance.insuree]
+            elif context == 'members':
+                return [instance.contract_details.insuree]
 
             elif context == 'validity':
                 validity_from = kwargs.get('validity_from', None)
@@ -114,8 +114,6 @@ class ContributionValuationRuleNoDependant(AbsStrategy):
                     contract = instance.contract_details.contract
                 if instance.__class__.__name__ == "ContractDetails":
                     contract = instance.contract
-
-                
                 if contract:
                     validity_from = validity_from or contract.date_valid_from
                     validity_to = validity_to or contract.date_valid_to
